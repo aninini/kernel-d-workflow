@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>cn.stylefeng.roses</groupId>
+        <artifactId>kernel-d-workflow</artifactId>
+        <version>7.2.1-test</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>workflow-business</artifactId>
+
+    <packaging>jar</packaging>
+
+    <dependencies>
+
+        <!--工作流api-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>workflow-api</artifactId>
+            <version>${roses.version}</version>
+        </dependency>
+
+        <!--演示环境api-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>demo-api</artifactId>
+            <version>${roses.version}</version>
+        </dependency>
+
+        <!--资源api模块-->
+        <!--用在资源控制器，资源扫描上-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>scanner-api</artifactId>
+            <version>${roses.version}</version>
+        </dependency>
+
+        <!--文件api模块-->
+        <!--bpmn文件上传需要用到file模块-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>file-api</artifactId>
+            <version>${roses.version}</version>
+        </dependency>
+
+        <!--数据库sdk-->
+        <!--数据库dao框架-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>db-sdk-mp</artifactId>
+            <version>${roses.version}</version>
+        </dependency>
+
+        <!--系统管理业务-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>system-spring-boot-starter</artifactId>
+            <version>${roses.version}</version>
+        </dependency>
+
+        <!--web模块-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!--flowable 引擎-->
+        <dependency>
+            <groupId>org.flowable</groupId>
+            <artifactId>flowable-spring-boot-starter-process</artifactId>
+            <version>${flowable.version}</version>
+        </dependency>
+
+        <!--flowable流程设计器-->
+        <dependency>
+            <groupId>org.flowable</groupId>
+            <artifactId>flowable-ui-modeler-conf</artifactId>
+            <version>${flowable.version}</version>
+            <exclusions>
+                <!--排除日志，解决冲突-->
+                <exclusion>
+                    <artifactId>log4j-slf4j-impl</artifactId>
+                    <groupId>org.apache.logging.log4j</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!--groovy执行脚本-->
+        <dependency>
+            <groupId>cn.stylefeng.roses</groupId>
+            <artifactId>groovy-spring-boot-starter</artifactId>
+            <version>${roses.version}</version>
+        </dependency>
+
+    </dependencies>
+
+
+</project>

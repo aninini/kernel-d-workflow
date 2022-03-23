@@ -1,0 +1,3 @@
+cn\stylefeng\roses\kernel\workflow\starter\GunsAppDispatcherServletConfiguration.class
+cn\stylefeng\roses\kernel\workflow\starter\GunsSpringSecurityAutoConfiguration.class
+cn\stylefeng\roses\kernel\workflow\starter\GunsWorkflowAutoConfiguration.class
